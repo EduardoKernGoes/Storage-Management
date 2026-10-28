@@ -1,0 +1,19 @@
+footer{
+  font-size: 1.1rem;
+  background: var(--second-bg);
+  box-shadow: 0px 10px 20px black;
+}
+
+footer > p{
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer__link{
+  color: black;
+  transition: var(--trans);
+}
+
+.footer__link:hover{
+  color:  rgb(50, 50, 80);
+}
