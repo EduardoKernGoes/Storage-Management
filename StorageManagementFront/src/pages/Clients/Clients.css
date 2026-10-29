@@ -1,0 +1,20 @@
+.clients__container{
+  background: var(--ligth-bg);
+  box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.clients__table_header{
+  background: var(--second-bg) !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.clients__add_client{
+  color: rgb(0, 180, 0);
+  transition: var(--trans);
+}
+
+.clients__add_client:hover{
+  color: rgb(0, 130, 0);
+  cursor: pointer;
+}

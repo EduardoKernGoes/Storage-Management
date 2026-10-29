@@ -1,6 +1,8 @@
+import { ToastContainer } from 'react-toastify'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-icons/font/bootstrap-icons'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/Home/Home'
 import Header from "./components/Header/Header"
 import Products from './pages/Products/Products'
@@ -11,6 +13,17 @@ import Footer from './components/Footer/Footer'
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer 
+        position="top-right" 
+        autoClose={3000} 
+        hideProgressBar={false} 
+        newestOnTop 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+      />
       <Header />
 
       <main className="container" style={{flexGrow: 1}}>

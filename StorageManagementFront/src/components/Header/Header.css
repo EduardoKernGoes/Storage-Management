@@ -34,7 +34,7 @@ header{
 
 .nav-link:hover{
   box-shadow: -2px 2px black;
-  background: rgb(200, 200, 200);
+  background: var(--principal-bg);
 }
 
 .component__bg{

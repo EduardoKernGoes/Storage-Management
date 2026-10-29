@@ -8,7 +8,3 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('clients', ClientController::class);
 Route::apiResource('partners', PartnerController::class);
 Route::apiResource('products', ProductController::class);
-
-Route::get('/teste', function(){
-    return ['message' => 'API funcionando'];
-});
