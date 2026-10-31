@@ -65,18 +65,16 @@ export default function Clients(){
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      let response
       if (modalMode === 'create') {
-        await api.post('/clients', formData);
-        toast.success('Cliente cadastrado com sucesso!')
-
+        response = await api.post('/clients', formData);
       } else if (modalMode === 'edit') {
-        await api.put(`/clients/${formData.id}`, formData);
-        toast.success('Cliente atualizado com sucesso!')
-
+        response = await api.put(`/clients/${formData.id}`, formData);
       } else {
-        await api.delete(`/clients/${deleteClient}`);
-        toast.success('Cliente excluído com sucesso!')
+        response = await api.delete(`/clients/${deleteClient}`);
       }
+
+      toast.success(response.data.message)
 
       setShowModifyModal(false);
       setShowDeleteModal(false);
@@ -89,7 +87,8 @@ export default function Clients(){
 
         toast.warning(errors[firstKey][0]);
       } else {
-        toast.error('Ocorreu um erro ao salvar cliente.')
+        const operation = modalMode === 'create' ? 'criar' : modalMode === 'edit' ? 'atualizar' : 'excluir';
+        toast.error(`Ocorreu um erro ao ${operation} cliente.`)
       }
     } finally {
       setDeleteClient(null)
@@ -102,6 +101,7 @@ export default function Clients(){
         cep: '',
         address: ''
       })
+      setModalMode(null);
     }
   };
 
