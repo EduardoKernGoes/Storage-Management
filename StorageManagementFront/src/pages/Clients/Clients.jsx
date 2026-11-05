@@ -119,7 +119,7 @@ export default function Clients(){
         <h2>
           Clientes
         </h2>
-        <i className="clients__add_client bi bi-person-plus-fill fs-2 mx-4 px-2" onClick={handleOpenCreate}></i>
+        <i className="add_item_icon bi bi-person-plus-fill fs-2 mx-4 px-2" onClick={handleOpenCreate}></i>
       </div>
       <div className='clients__container rounded-4 overflow-hidden shadow-sm'>
         {clients.length === 0 ? (

@@ -37,3 +37,23 @@
   min-height: 100vh;
   background: var(--principal-bg);
 }
+
+.add_item_icon{
+  color: rgb(0, 180, 0);
+  transition: var(--trans);
+}
+
+.add_item_icon:hover{
+  color: rgb(0, 130, 0);
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
